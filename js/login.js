@@ -7,7 +7,7 @@ document.getElementById('loginBtn').addEventListener('click', function (event) {
 
     if (phoneNum.value === '2066' && pin.value === '213') {
         console.log('good, this is your new home')
-        window.location.href='/home.html'
+        window.location.href = '/home.html'
 
     } else {
         alert('wrong credential\n')
