@@ -4,7 +4,7 @@
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>My Pay</title>
+     <title>MyPay login</title>
 
      <!-- daisy CDN -->
      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -12,7 +12,7 @@
 </head>
 
 <body>
-     <h1 class="text-5xl font-bold text-center mt-20 mb-20 text-green-900">Welcome to My Pay</h1>
+     <h1 class="text-5xl font-bold text-center mt-20 mb-20 text-green-900">Welcome to MyPay Login</h1>
      <!-- phone mockup -->
      <main class="flex justify-center items-center">
           <div class="mockup-phone">
@@ -25,12 +25,14 @@
                               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                                    <div class="card-body">
                                         <fieldset class="fieldset">
+                                            <!-- phone -->
                                              <label class="label">Phone Number</label>
-                                             <input type="text" class="input" placeholder="Enter your Phone number" />
+                                             <input type="text" id="phoneNum" class="input" placeholder="Enter your Phone number" />
+                                             <!-- pin -->
                                              <label class="label">Pin</label>
-                                             <input type="password" class="input" placeholder="Enter your Pin" />
+                                             <input type="password" id="pin" class="input" autocomplete="off" placeholder="Enter your Pin" />
                                              <!-- <div><a class="link link-hover">Forgot password?</a></div> -->
-                                             <button class="btn btn-neutral mt-4">Login</button>
+                                             <button class="btn btn-neutral mt-4" id="loginBtn">Login</button>
                                         </fieldset>
                                    </div>
                               </div>
@@ -39,6 +41,8 @@
                </div>
           </div>
      </main>
+
+     <script src="js/login.js"></script>
 </body>
 
 </html>

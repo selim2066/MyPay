@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home of MyPay</title>
+    <!-- daisy CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <main class="flex justify-center mt-20">
+        <div class="mockup-phone">
+            <div class="mockup-phone-camera"></div>
+            <div class="mockup-phone-display text-black bg-white grid place-content-center">
+                <div>
+                    <h1 class="text-center mt-20 font-bold text-3xl"> Homepage of MyPay</h1><br>
+                    <!-- status of money -->
+                    <div class="flex justify-center mt-10">
+                        <div class="stats shadow">
+                            <div class="stat">
+
+                                <div id="balance" class="stat-value">89,400</div>
+                                <div class="stat-desc">Available Balance</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+
+                <!-- user action -->
+                <div class="userAction flex justify-center">
+                    <button class="btn btn-soft btn-success btn-xl">Cash In</button>
+                    <button class="btn btn-soft btn-error btn-xl">CashOut</button>
+                </div>
+                <div class="divider"></div>
+
+                <!-- form add money start-->
+                <div class=" flex justify-center">
+                    <div class="card bg-base-100 w-full max-w-sm shadow-xl">
+                        <div class="card-body">
+                            <fieldset class="fieldset">
+                                <label class="label">Amount</label>
+                                <input id="amount" type="Number" name="no-autofill-amount" class="input"
+                                    autocomplete="off" placeholder="Amount of Money" />
+                                <label class="label">Pin</label>
+                                <input id="pin" type="password" name="no-autofill-pin" class="input" autocomplete="off"
+                                    placeholder="Pin" />
+
+                                <button id="addMoney" class="btn btn-neutral mt-4 bg-lime-700 border-none ">Add
+                                    Money</button>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- form add money end -->
+            </div>
+        </div>
+
+    </main>
+
+    <script src="js/home.js"></script>
+    <script>
+        document.getElementById('addMoney').addEventListener('click', function (event) {
+            event.preventDefault()
+            console.log('teka de teka')
+            const amount = document.getElementById('amount').value
+            const pin = document.getElementById('pin').value
+            const balance=document.getElementById('balance').innerText
+            console.log(amount, pin, balance)
+        })
+    </script>
+</body>
+
+</html>
