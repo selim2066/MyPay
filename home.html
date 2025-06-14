@@ -22,7 +22,7 @@
                         <div class="stats shadow">
                             <div class="stat">
 
-                                <div id="balance" class="stat-value">89,400</div>
+                                <div id="balance" class="stat-value">89400</div>
                                 <div class="stat-desc">Available Balance</div>
                             </div>
                         </div>
@@ -70,8 +70,20 @@
             console.log('teka de teka')
             const amount = document.getElementById('amount').value
             const pin = document.getElementById('pin').value
-            const balance=document.getElementById('balance').innerText
+            const balance = document.getElementById('balance').innerText
             console.log(amount, pin, balance)
+
+            // convert string to number for calculation
+            if (pin === '213') {
+                const amountNum = parseFloat(amount)
+                const balanceNum = parseFloat(balance)
+                const updateBalance = amountNum + balanceNum
+
+                document.getElementById('balance').innerText = updateBalance
+                 
+            } else {
+                alert('wrong pin, try again')
+            }
         })
     </script>
 </body>
